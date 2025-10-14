@@ -6,4 +6,6 @@
         <p>Today is: {{today}}</p>
         <a href="{% url 'notes.list' %}" class="btn btn-primary"> Check out these smart notes!</a>
         <a href="{% url 'notes.popular' %}" class="btn btn-primary"> These are the most popular notes!</a>
+        <h2 class="my-5"> Why SmartNotes?</h2>
+        {% include "home/advantages.html" %}
 {% endblock %}
