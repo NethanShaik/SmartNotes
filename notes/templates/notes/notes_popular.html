@@ -1,11 +1,16 @@
 {% extends "base.html" %}
 
 {% block content %}
-
-    <h1> Popular Notes</h1>
-    <ul>
+    <div class="border rounded">
+    <h1 class="my-5"> Popular Notes</h1>
+    <div class="row row-cols-3 g-3"> 
         {% for note in notes %}
-            <li class="note-li"> {{note.title}}-{{note.likes}}</li>
+        <div class="col">
+            <div class = "p-3 border">
+            <a href = "{% url 'notes.detail' pk=note.id %}" class="text-dark text-decoration"> {{note.title}}-{{note.likes}} </a>
+            </div>
+        </div>
         {% endfor %}
-    </ul>
+        </div>
+    </div>
 {% endblock %}
